@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Password Genrator</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="JS/pass.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="genratorbase">
+            <div class="genrator_inner_div">
+                <div class="logo">
+                    <span>DHUB</span>
+                </div>
+
+                <div class="input-feild">
+                    <input type="text" placeholder="- - VALUE - -" title="Value Genration" id="passval">
+                </div>
+
+                <div class="levelbar-base">
+                    <div class="barprogress" id="bar">
+                    </div>
+                </div>
+
+                <span id="level">NULL</span>
+
+                <div class="length-selection">
+                    <input type="number" name="length" id="len" title="length" value="16">
+                </div>
+
+                <div class="selection-input-feild">
+                    <div class="selection-input-feild-base">
+                        <input type="checkbox" title="Uppercase" id="check0" class="check" name="check" value="uc" checked>
+                        <label for="check">Upper-Case</label>
+                    </div>
+
+                    <div class="selection-input-feild-base">
+                        <input type="checkbox" title="Lowercase" id="check1" class="check" name="check" value="lc" checked>
+                        <label for="check">Lower-Case</label>
+                    </div>
+
+                    <div class="selection-input-feild-base">
+                        <input type="checkbox" title="Numbers" id="check2" class="check" name="check" value="num" checked>
+                        <label for="check">Numbers</label>
+                    </div>
+
+                    <div class="selection-input-feild-base">
+                        <input type="checkbox" title="SpecialCharacter" id="check3" class="check" name="check" value="sc" checked>
+                        <label for="check">Special Characters</label>
+                    </div>
+                </div>
+
+                <div class="btn-base">
+                    <button type="button" name="btn" id="copy" title="copy" onclick="copyToClipboard('#passval')">Copy</button>
+
+                    <button type="button" name="refbtn" id="refresh" title="Refresh">Refresh</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function myFunction() {
+                /* Get the text field */
+                var copyText = document.getElementById("passval");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            }
+        </script>
+
+    </main>
+</body>
